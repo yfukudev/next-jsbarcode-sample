@@ -7,7 +7,7 @@ type PrintLayoutProps = {
   barcodeValue: string;
 };
 
-export const PrintLayout = React.forwardRef<HTMLDivElement, PrintLayoutProps>((props, ref) => {
+export const PrintLayout = React.forwardRef<HTMLDivElement, PrintLayoutProps>(function PrintLayout(props, ref) {
   return (
     <div ref={ref} className="print-only flex flex-col items-center h-screen">
       <h1 className='text-xs text-center mt-5'>Barcode Sample</h1>
@@ -24,5 +24,3 @@ export const PrintLayout = React.forwardRef<HTMLDivElement, PrintLayoutProps>((p
     </div>
   );
 });
-
-PrintLayout.displayName = 'PrintLayout';
