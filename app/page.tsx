@@ -23,6 +23,11 @@ export default function Home() {
         placeholder="Enter text for barcode"
         className='mt-5 px-4 py-2 text-black text-lg font-semibold rounded no-print'
       />
+      {inputValue && (
+        <div className='mt-5'>
+          <Barcode value={inputValue} />
+        </div>
+      )}
       <ReactToPrint
         trigger={() => (
           <button
