@@ -25,7 +25,6 @@ body {
   }
 }
 
-/* 印刷時に非表示にする要素 */
 @media print {
   .print-only {
     display: flex;
@@ -33,5 +32,9 @@ body {
 
   .no-print {
     display: none;
+  }
+
+  .next-page {
+    page-break-before: always;
   }
 }
